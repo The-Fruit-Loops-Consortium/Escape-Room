@@ -7,6 +7,7 @@ let db = [
   question: "What is 2+2"
   , answer: 4
  }
+
  , {
   question: "What is 3+3"
   , answer: 6
@@ -35,3 +36,8 @@ if(res == db[randomQuestion].answer) {
 console.log(escapekey);
 
 }
+
+
+let answer =document.prompt(db[0].question);
+
+console.log(answer);
