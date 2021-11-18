@@ -14,6 +14,7 @@ let db = [
   , answer: 6
  }
 ];
+
 let escapekey = '';
 
 
@@ -25,31 +26,29 @@ let escapekey = '';
 //escapekey needs to equal "2||4||6&&"
 
 
-// for (let i = 0; i < 2; i++) {
+for(let i=0; i<2; i++){
 
-let randomQuestion = Math.floor(Math.random() * db.length);
-console.log(randomQuestion);
+ let randomQuestion = Math.floor(Math.random()*db.length);
+ console.log(randomQuestion);
+
 
 
 let res = prompt(db[randomQuestion].question);
 
 
-if (res == db[randomQuestion].answer) {
+
+if(res == db[randomQuestion].answer) {
  // console.log(+res);
  // console.log('res: '+res);
  escapekey += res;
-} else {
- console.log('false');
+}else{
+
+  console.log('false');
 }
 console.log(escapekey);
 
 
-
 // }
-
-
-
-
 
 let initial1 = prompt('What is your first initial?');
 let initial2 = prompt('What is your middle initial (if you don\'t have one, select "x"');
@@ -79,15 +78,9 @@ if(roomExitTest === escapekey){
  console.log('Sorry, wrong key!');
 }
 
-    {
-        question: "What is 1+1"
-        , answer: 2
-    }
-    , {
-        question: "What is 2+2"
-        , answer: 4
-    }
-]
+}
+
+
 
 let answer = document.prompt(db[0].question);
 
