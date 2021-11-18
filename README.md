@@ -15,6 +15,3 @@
 
 ### UML
 1. [Team UML](https://github.com/The-Fruit-Loops-Consortium/Escape-Room/blob/working/TeamFruitLoops%20-%20UML.pdf)
-
-1. [Team Wireframes] (TeamFruitLoops WireFrame.pdf)
-
