@@ -1,3 +1,7 @@
+body {
+    background-color: lightgrey;
+}
+
 #closed-book {
     width: 250px
 }
@@ -22,6 +26,18 @@
 
 #open-jack:active {
     transform:scale(1);
+}
+
+#open-box {
+    width: 250px;
+}
+
+#open-box:hover {
+    transform: scale(1.1);
+}
+
+#open-box:active {
+    transform: scale(1);
 }
 
 #balloonDiv {
@@ -61,9 +77,26 @@
 
 #balloonThree{
     background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
 }
 
 p {
     font-weight: bold;
     font-size: 1.5rem;
+}
+
+#exit {
+    float: right;
+    width:250px;
+}
+
+#exit:hover {
+    transform: scale(1.1);
+}
+
+#exit:active {
+    transform: scale(1);
 }
