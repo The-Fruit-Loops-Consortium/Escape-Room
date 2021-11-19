@@ -2,6 +2,7 @@
 
 let closedBook = document.querySelector('#closed-book');
 let openjack = document.querySelector('#open-jack');
+let openbox = document.querySelector('#open-box');
 let balloonOne = document.querySelector('#balloonOne');
 let balloonTwo = document.querySelector('#balloonTwo');
 let balloonThree = document.querySelector('#balloonThree');
@@ -47,6 +48,12 @@ function renderPasswordTwo(password) {
   balloonTwo.appendChild(pPassword);
 }
 
+function renderPasswordThree(password) {
+  let pPassword = document.createElement('p');
+  pPassword.textContent = password;
+  balloonThree.appendChild(pPassword);
+}
+
 function bookPuzzle(event) {
   let randomNum = Math.floor(Math.random() * dbtwo.length);
   let randomQuestion = dbtwo[randomNum].question;
@@ -59,8 +66,6 @@ function bookPuzzle(event) {
     alert('you guessed wrong');
   }
 }
-
-closedBook.addEventListener('click', bookPuzzle);
 
 function jackPuzzle(event) {
   let randomNum = Math.floor(Math.random() * dbtwo.length);
@@ -75,4 +80,19 @@ function jackPuzzle(event) {
   }
 }
 
+function boxPuzzle(event) {
+  let randomNum = Math.floor(Math.random() * dbtwo.length);
+  let randomQuestion = dbtwo[randomNum].question;
+  let boxPuzzleAnswer = prompt(randomQuestion);
+  console.log(boxPuzzleAnswer);
+  if (parseInt(boxPuzzleAnswer) === dbtwo[randomNum].answer) {
+    renderPasswordThree(boxPuzzleAnswer);
+    event.target.removeEventListener('click', boxPuzzle);
+  } else {
+    alert('you guessed wrong');
+  }
+}
+
+closedBook.addEventListener('click', bookPuzzle);
+openbox.addEventListener('click', boxPuzzle);
 openjack.addEventListener('click', jackPuzzle);
