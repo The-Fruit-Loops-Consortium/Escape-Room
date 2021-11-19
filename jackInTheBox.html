@@ -13,7 +13,7 @@
 
   </header>
   <main>
-    <img src="imgs/closedJack.png" alt="Closed jack in the box">
+    <img id="jack-in-the-box" src="imgs/closedJack.png" alt="Closed jack in the box">
     
     <!-- Create a button for the modal and call it.-->
     <button id="jackButton">Push Me</button>
@@ -21,10 +21,14 @@
     <!-- The modal -->
     <div id="jackModal" class="jackInTheBoxModal">
 
-      <!-- Modal content-->
+      <!-- Modal content - the close button -->
       <div class="modal-content">
         <span class="closeJack">&times;</span>
-        <p>This is a test.</p>
+
+        <!-- Modal Content (the images) -->
+        <img class="modal-content" id="star1">
+        <img class="modal-content" id="star2">
+        <img class="modal-content" id="star3">
       </div>
 
     </div>
